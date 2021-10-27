@@ -17,7 +17,40 @@ Ali Farhani Sani</h1>
     <p>Latihan Bootstrap
             <a href="https://23220009.github.io">Klik Disini</a>
         </p>
-    
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Latihan Menambahkan Google Maps</title>
+  
+    <!-- Library dari Google Maps -->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+        // Fungsi initialize : untuk mengatur properti Google Maps
+        function initialize() {
+        var propertiPeta = {
+            center:new google.maps.LatLng(-6.203035,106.846739),
+            zoom:9,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        
+        var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+        }
+
+        // event jendela di-load  
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  
+</head>
+<body>
+
+    <!-- Elemen yang akan menjadi kontainer Google Maps -->
+    <div id="googleMap" style="width:100%;height:380px;"></div>
+  
+</body>
+</html>
     
 
     <!-- Optional JavaScript; choose one of the two! -->
